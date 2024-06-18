@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    background-color: rgb(84, 82, 82);
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    width: 23vw;
+    background-color: rgb(31, 30, 30);
+    /* border: 5px solid red; */
+    border-radius: 25px;
+    transform: translateY(10%);
+}
+.display{
+    height: 33%;
+    width: 90%;
+    /* border: 5px solid red; */
+    color: white;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    flex-direction: column;
+    padding-bottom: 35px;
+}
+.calculation{
+    color: rgb(160, 155, 155);
+}
+.result{
+    font-size: 30px;
+}
+.keys{
+    /* border: 5px solid red; */
+    height: 60%;
+    width: 90%;
+    color: white;
+    display: flex;
+}
+
+.rows{
+    /* border: 5px solid red; */
+    width: 75%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 10px;
+    column-gap: 10px;
+    margin-right: 10px;
+
+}
+.key{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid rgb(51, 0, 255); */
+    border-radius: 13px;
+    background-color: rgb(49, 48, 48);
+    color: rgb(48, 134, 214);
+    font-size: 25px;
+    transition: all ease-in-out 0.1s;
+}
+.key:hover{
+    cursor: pointer;
+    transform: scale(1.035);
+    box-shadow: 0 0 25px 2px #f5f7f844;
+    text-shadow: 0 0 10px #fafafa;
+    color: white;
+}
+.key:active{
+    transform: scale(1);
+    box-shadow: none;
+    text-shadow: none;
+}
+.columns{
+    /* border: 5px solid red; */
+    width: 25%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 2fr 2fr;
+    row-gap: 10px;
+}
+.columns .key, .divide{
+    background-color: rgb(48, 79, 214);
+    color: white;
+}
+.clear, .ac{
+    color: white;
+    background-color: gray;
+}
+.zero{
+    grid-column: 1/3;
+}
